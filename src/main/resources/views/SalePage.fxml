@@ -1,0 +1,105 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<BorderPane fx:id="salePane" maxHeight="720.0" maxWidth="1280.0" minHeight="-Infinity" minWidth="-Infinity" prefHeight="720.0" prefWidth="1280.0" style="-fx-background-color: e6e6fa;" xmlns="http://javafx.com/javafx/8.0.141" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controllers.SaleViewController">
+   <right>
+      <VBox fx:id="saleVBox" prefHeight="720.0" prefWidth="350.0" BorderPane.alignment="CENTER">
+         <children>
+            <Label fx:id="nameProject" alignment="CENTER" prefHeight="100.0" prefWidth="350.0" text="POS project" textFill="#b9a2a2">
+               <font>
+                  <Font size="48.0" />
+               </font>
+               <VBox.margin>
+                  <Insets />
+               </VBox.margin>
+            </Label>
+            <TableView fx:id="tableOrders" prefHeight="300.0" prefWidth="334.0">
+              <columns>
+                <TableColumn fx:id="nameOrder" prefWidth="238.0" text="รายการสินค้า" />
+                <TableColumn fx:id="qtyOrder" minWidth="0.0" prefWidth="55.0" text="จำนวน" />
+                  <TableColumn fx:id="priceOrder" prefWidth="49.0" text="ราคา" />
+              </columns>
+               <VBox.margin>
+                  <Insets />
+               </VBox.margin>
+            </TableView>
+            <AnchorPane prefHeight="28.0" prefWidth="345.0">
+               <children>
+                  <Button fx:id="deleteBtn" layoutX="267.0" layoutY="4.0" mnemonicParsing="false" onAction="#deletePrd" prefHeight="42.0" prefWidth="52.0">
+                     <graphic>
+                        <ImageView fitHeight="35.0" fitWidth="85.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../images/Recycle_Bin.png" />
+                           </image>
+                        </ImageView>
+                     </graphic>
+                  </Button>
+                  <Label fx:id="namePO" alignment="BOTTOM_LEFT" layoutX="4.0" layoutY="1.0" prefHeight="46.0" prefWidth="257.0">
+                     <font>
+                        <Font size="22.0" />
+                     </font>
+                  </Label>
+               </children>
+               <VBox.margin>
+                  <Insets top="10.0" />
+               </VBox.margin>
+            </AnchorPane>
+            <Label prefHeight="0.0" prefWidth="345.0" text="-----------------------------------------------------------------------">
+               <VBox.margin>
+                  <Insets top="7.0" />
+               </VBox.margin>
+            </Label>
+            <Label fx:id="total" prefHeight="53.0" prefWidth="352.0" text="        Total:    0.00">
+               <font>
+                  <Font size="36.0" />
+               </font>
+               <VBox.margin>
+                  <Insets top="5.0" />
+               </VBox.margin>
+            </Label>
+            <Button fx:id="payBtn" mnemonicParsing="false" onAction="#handleButtonPay" prefHeight="69.0" prefWidth="325.0" text="ชำระเงิน">
+               <font>
+                  <Font size="40.0" />
+               </font>
+               <VBox.margin>
+                  <Insets left="10.0" right="10.0" top="10.0" />
+               </VBox.margin>
+            </Button>
+            <TextField fx:id="commentTextField" prefHeight="30.0" prefWidth="325.0" promptText="-------Comment--------">
+               <VBox.margin>
+                  <Insets left="10.0" right="10.0" top="15.0" />
+               </VBox.margin>
+            </TextField>
+            <Button fx:id="btnBack" mnemonicParsing="false" onAction="#actionLogoutBtn" prefHeight="25.0" prefWidth="91.0" text="Back">
+               <VBox.margin>
+                  <Insets left="245.0" top="9.0" />
+               </VBox.margin>
+            </Button>
+         </children>
+         <padding>
+            <Insets left="5.0" />
+         </padding>
+      </VBox>
+   </right>
+   <center>
+      <TableView fx:id="tableProducts" fixedCellSize="40.0" prefHeight="720.0" prefWidth="760.0" BorderPane.alignment="CENTER">
+        <columns>
+            <TableColumn fx:id="noProduct" prefWidth="57.0" text="ID" />
+          <TableColumn fx:id="nameProduct" prefWidth="779.0" text="ชื่อสินค้า" />
+          <TableColumn fx:id="priceProduct" prefWidth="86.0" text="ราคา" />
+        </columns>
+      </TableView>
+   </center>
+</BorderPane>

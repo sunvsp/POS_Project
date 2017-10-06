@@ -1,0 +1,20 @@
+
+#payBtn {
+	-fx-background-color: #fa807;
+	-fx-background-radius: 25px;
+}
+
+#payBtn:hover {
+	-fx-background-radius: 25px;
+	-fx-effect: dropshadow(three-pass-box, rgba(0,0,0,0.8), 10, 0, 5, 5);
+	-fx-text-fill: #f5f5f5;
+}
+
+#payBtn:pressed {
+	-fx-effect: innershadow(one-pass-box, rgba(0,0,0,0.8), 15, 0, 0, 0);
+}
+
+#nameProject {
+	-fx-background-image: url("/models/bg-saleMenu5.gif");
+	-fx-background-size: stretch;
+}

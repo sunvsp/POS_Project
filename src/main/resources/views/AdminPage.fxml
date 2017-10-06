@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<BorderPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="720.0" prefWidth="1280.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controllers.AdminViewController">
+   <left>
+      <VBox prefHeight="720.0" prefWidth="320.0" style="-fx-background-color: LIGHTBLUE;" BorderPane.alignment="CENTER">
+         <children>
+            <MenuBar prefHeight="21.0" prefWidth="320.0">
+              <menus>
+                <Menu mnemonicParsing="false" text="File">
+                  <items>
+                    <MenuItem mnemonicParsing="false" text="Close" />
+                  </items>
+                </Menu>
+                <Menu mnemonicParsing="false" text="Help">
+                  <items>
+                    <MenuItem mnemonicParsing="false" text="About" />
+                  </items>
+                </Menu>
+              </menus>
+            </MenuBar>
+            <Button fx:id="manageBtn" alignment="BOTTOM_LEFT" mnemonicParsing="false" onAction="#actionManageBtn" prefHeight="70.0" prefWidth="320.0" style="-fx-background-color: #fffafa;" text="จัดการคลังสินค้า" textFill="#861616">
+               <font>
+                  <Font size="30.0" />
+               </font>
+            </Button>
+            <Button fx:id="orderHistoryBtn" alignment="BOTTOM_LEFT" mnemonicParsing="false" onAction="#actionOrderHistoryBtn" prefHeight="70.0" prefWidth="320.0" style="-fx-background-color: #fffafa;" text="ประวัติการสั่งซื้อ" textFill="#861616">
+               <font>
+                  <Font size="30.0" />
+               </font>
+            </Button>
+            <Button fx:id="statBtn" alignment="BOTTOM_LEFT" mnemonicParsing="false" onAction="#actionStatBtn" prefHeight="70.0" prefWidth="320.0" style="-fx-background-color: #fffafa;" text="สถิติ">
+               <font>
+                  <Font size="30.0" />
+               </font>
+            </Button>
+            <Button fx:id="settingBtn" alignment="BOTTOM_LEFT" mnemonicParsing="false" onAction="#actionSettingBtn" prefHeight="70.0" prefWidth="320.0" style="-fx-background-color: #fffafa;" text="ตั้งค่า">
+               <font>
+                  <Font size="30.0" />
+               </font>
+            </Button>
+            <Button fx:id="logoutBtn" alignment="BOTTOM_LEFT" mnemonicParsing="false" onAction="#actionLogoutBtn" prefHeight="70.0" prefWidth="320.0" style="-fx-background-color: #fffafa;" text="ออกจากระบบ">
+               <font>
+                  <Font size="30.0" />
+               </font>
+            </Button>
+         </children>
+      </VBox>
+   </left>
+   <center>
+      <AnchorPane fx:id="adminPane" prefHeight="720.0" prefWidth="960.0" style="-fx-background-color: GRAY;" BorderPane.alignment="CENTER" />
+   </center>
+</BorderPane>
